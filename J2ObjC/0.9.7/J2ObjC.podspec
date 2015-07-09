@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.author       = "Google Inc."
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
 
-  s.source_files = '**/*.h'
   s.public_header_files = '**/*.h'
 
   # Top level attributes can't be specified by subspecs.
