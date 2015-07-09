@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.default_subspec = 'lib/jre'
   s.source_files = '**/*.h'
+  s.public_header_files = '**/*.h'
 
   # Top level attributes can't be specified by subspecs.
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
