@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.author       = "Google Inc."
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
 
-  s.public_header_files = 'dist/include/**/*.h'
+  s.public_header_files = 'dist/include/*.h'
 
   # Top level attributes can't be specified by subspecs.
-  s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
+  s.vendored_libraries = 'dist/lib/libj2objc  _main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
   s.libraries = 'icucore', 'z'
 end
