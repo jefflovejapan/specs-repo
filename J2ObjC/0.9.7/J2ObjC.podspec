@@ -8,7 +8,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
 
   # Top level attributes can't be specified by subspecs.
+  s.prepare_command = <<-CMD
+    scripts/download_distribution.sh
+  CMD
+
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
-  s.libraries = 'icucore', 'z'
+  s.libraries = 'icucore', 'z', 'jre_emul'
 end
