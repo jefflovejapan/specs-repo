@@ -6,9 +6,10 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/google/j2objc"
   s.author       = "Google Inc."
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
-  
+
   s.source_files = '**/*.h'
   s.public_header_files = '**/*.h'
+  s.header_mappings_dir = 'dist/include'
 
   # Top level attributes can't be specified by subspecs.
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
