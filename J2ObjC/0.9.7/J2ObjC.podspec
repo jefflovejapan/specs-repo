@@ -10,21 +10,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
   s.requires_arc = false
-  s.default_subspec = 'lib/jre'
   s.source_files = '**/*.h'
   s.public_header_files = '**/*.h'
 
   # Top level attributes can't be specified by subspecs.
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
-  
-  s.subspec 'lib' do |lib|
-    lib.frameworks = 'Security'
-    lib.osx.frameworks = 'ExceptionHandling'
-
-    lib.subspec 'jre' do |jre|
-      jre.preserve_paths = 'dist'
-      jre.libraries = 'jre_emul', 'icucore', 'z'
-    end
-    
-  end
+  s.frameworks = 'Security'
+  s.libraries = 'icucore', 'z'
 end
