@@ -16,9 +16,6 @@ Pod::Spec.new do |s|
   s.header_mappings_dir = 'dist/include'
   s.public_header_files = 'dist/include/**/*.h'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
-  s.prepare_command = <<-CMD
-    scripts/download_distribution.sh
-  CMD
   
   s.subspec 'lib' do |lib|
     lib.frameworks = 'Security'
