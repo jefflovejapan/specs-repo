@@ -6,10 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/google/j2objc"
   s.author       = "Google Inc."
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
-
-  s.ios.deployment_target = '5.0'
-  s.osx.deployment_target = '10.7'
-  s.requires_arc = false
+  
   s.source_files = '**/*.h'
   s.public_header_files = '**/*.h'
 
