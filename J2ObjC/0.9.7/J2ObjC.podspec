@@ -16,4 +16,8 @@ Pod::Spec.new do |s|
   s.frameworks = 'Security'
   s.libraries = 'icucore', 'z', 'jre_emul'
 
+  s.prepare_command = <<-CMD
+    scripts/download_distribution.sh
+  CMD
+
 end
