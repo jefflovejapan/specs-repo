@@ -8,6 +8,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
 
   # Top level attributes can't be specified by subspecs.
+  s.prepare_command = <<-CMD
+  scripts/download_distribution.sh
+  CMD
+  
   s.header_mappings_dir = 'dist/include'
   s.source_files = '**/*.{h,m}'
 
