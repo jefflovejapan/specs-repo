@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
 
   # Top level attributes can't be specified by subspecs.
   s.prepare_command = <<-CMD
-  scripts/download_distribution.sh
+    scripts/download_distribution.sh
   CMD
 
-  s.header_mappings_dir = ''
+  s.header_mappings_dir = '.'
   s.source_files = '**/*.{h,m}'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
