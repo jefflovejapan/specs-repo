@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.header_mappings_dir = 'dist/include'
   s.source_files = '**/*.{h,m}'
-
+  s.preserve_paths = 'dist/include'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
   s.libraries = 'icucore', 'z', 'jre_emul'
