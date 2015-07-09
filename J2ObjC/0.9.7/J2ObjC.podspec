@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     scripts/download_distribution.sh
   CMD
 
-  s.public_header_files = 'dist/include'
+  s.public_header_files = '**/*.h'
 
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
