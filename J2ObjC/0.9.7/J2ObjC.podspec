@@ -7,17 +7,18 @@ Pod::Spec.new do |s|
   s.author       = "Google Inc."
   s.source       = { :git => "https://github.com/jefflovejapan/j2objc.git", :tag => s.version.to_s }
 
+  s.requires_arc = false
+  s.header_mappings_dir = "dist/include"
+  
   # Top level attributes can't be specified by subspecs.
   s.prepare_command = <<-CMD
     scripts/download_distribution.sh
   CMD
 
-  s.requires_arc = false
   
   s.source_files = 'jre_emul/Classes/*.{h,m}', 'dist/include/java/io/**/*.{h,m}', 'dist/include/java/lang/**/*.{h,m}', 'dist/include/java/util/*.{h,m}'
   s.public_header_files = 'jre_emul/Classes/*.h', 'dist/include/java/io/**/*.h', 'dist/include/java/lang/**/*.h', 'dist/include/java/util/*.h'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
-  s.header_mappings_dir = "dist/include"
   s.frameworks = 'Security'
 
 end
