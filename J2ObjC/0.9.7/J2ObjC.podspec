@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   CMD
 
   
-  s.source_files = 'jre_emul/Classes/*.{h,m}', 'dist/include/java/{io,lang,util}/**/*.{h,m}'
-  s.public_header_files = 'jre_emul/Classes/*.h', 'dist/include/java/{io,lang,util}/**/*.h'
+  s.source_files = 'jre_emul/Classes/*.{h,m}', 'dist/include/java/io/**/*.{h,m}', 'dist/include/java/lang/**/*.{h,m}', 'dist/include/java/util/*.{h,m}'
+  s.public_header_files = 'jre_emul/Classes/*.h', 'dist/include/java/io/**/*.h', 'dist/include/java/lang/**/*.h', 'dist/include/java/util/*.h'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.header_mappings_dir = "dist/include"
   s.frameworks = 'Security'
