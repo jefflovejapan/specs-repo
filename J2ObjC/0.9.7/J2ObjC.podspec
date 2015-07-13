@@ -12,7 +12,9 @@ Pod::Spec.new do |s|
     scripts/download_distribution.sh
   CMD
 
-  s.source_files = '**/include/java/util/ArrayList.h'
+  
+  s.source_files = '**/ArrayList.h'
+  s.public_header_files = '**/ArrayList.h'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
   s.libraries = 'icucore', 'z', 'jre_emul'
