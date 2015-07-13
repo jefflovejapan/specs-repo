@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
     scripts/download_distribution.sh
   CMD
 
+  s.requires_arc = false
   
   s.source_files = 'jre_emul/Classes/*.{h,m}', 'dist/include/java/io/**/*.{h,m}', 'dist/include/java/lang/**/*.{h,m}', 'dist/include/java/util/*.{h,m}'
   s.public_header_files = 'jre_emul/Classes/*.h', 'dist/include/java/io/**/*.h', 'dist/include/java/lang/**/*.h', 'dist/include/java/util/*.h'
