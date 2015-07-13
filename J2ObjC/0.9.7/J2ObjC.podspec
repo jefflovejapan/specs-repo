@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   CMD
 
   
-  s.source_files = '**/ArrayList.h'
-  s.public_header_files = '**/ArrayList.h'
+  s.source_files = 'jre_emul/Classes/*.{h,m}'
+  s.public_header_files = 'jre_emul/Classes/*.h'
   s.vendored_libraries = 'dist/lib/libj2objc_main.a', 'dist/lib/libjre_emul.a'
   s.frameworks = 'Security'
   s.libraries = 'icucore', 'z', 'jre_emul'
